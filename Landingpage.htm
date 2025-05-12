@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahindra Thar 4x4</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .header {
+            background-color: #1e40af;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 0.5rem;
+            margin: 1rem auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav a:hover {
+            color: #dbeafe;
+        }
+
+        .description-section {
+            background-image: url("https://wallpapers.com/images/hd/mahindra-thar-2021-off-road-snow-9v4ttw370stvppjy.jpg");
+            background-blend-mode: screen;
+            filter: brightness(0.9);
+            background-position:center;
+            background-size:cover;
+            background-color: #cddeef;
+            padding: 2rem 1rem;
+            margin: 1rem auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #d1d5db;
+        }
+
+        .description-section h2 {
+            font-size: 2rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .description-section p {
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            background-image: linear-gradient(to bottom right, #1d4ed8, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            background-color: #f59e0b;
+            color: #1e40af;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 1rem;
+        }
+
+        .hero button:hover {
+            background-color: #d97706;
+        }
+
+        .features {
+            padding: 3rem 1rem;
+            text-align: center;
+            margin: 1rem auto;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #1e40af;
+        }
+
+        .feature_grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .feature_grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .feature_grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .feature_card {
+            background-color: #f9f9f9;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .feature_card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e40af;
+            text-align: center;
+        }
+
+        .feature_card p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .feature_card img {
+            border-radius: 0.5rem;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .specs {
+            background-color: #eff6ff;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            margin: 1rem auto;
+        }
+
+        .specs h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #1e40af;
+        }
+
+        .specs_grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .specs_grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .specs_card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .specs_card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+
+        .specs_card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specs_card li {
+            color: #4b5563;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .specs_card li:last-child {
+            border-bottom: none;
+        }
+
+        .book {
+            background-image: linear-gradient(to bottom right, #1d4ed8, #2563eb);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            margin: 1rem auto;
+        }
+
+        .book h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .book p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .book form {
+            max-width: 32rem;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .book input {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1d5db;
+        }
+
+        .book button {
+            background-color: #f59e0b;
+            color: #1e40af;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 1rem;
+        }
+
+        .book button:hover {
+            background-color: #d97706;
+        }
+
+        .footer {
+            background-color: #374151;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            border-radius: 0.5rem;
+            margin: 1rem auto;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="https://wallpaperaccess.com/full/12945675.jpg" alt="Mahindra Logo">
+            </div>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#specs">Specifications</a>
+                <a href="#book">Book Now</a>
+            </nav>
+        </header>
+
+        <section class="description-section">
+            <h2>Discover the Mahindra Thar 4x4</h2>
+            <p>The Mahindra Thar is an iconic off-road SUV, celebrated for its robust build, adventurous spirit, and exceptional 4x4 capabilities. Whether you're navigating challenging terrains or cruising through city streets, the Thar delivers a unique and thrilling driving experience. Its blend of classic design and modern features makes it a standout choice for those who seek both adventure and style.</p>
+        </section>
+
+        <section class="hero">
+            <h1>Mahindra Thar 4x4</h1>
+            <p>Built for the Wild. Driven by Adventure.</p>
+            <button onclick="window.location.href='#book'">Book Now</button>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Key Features</h2>
+            <div class="feature_grid">
+                <div class="feature_card">
+                    <h3>Powerful Engine</h3>
+                    <p>Experience thrilling performance with the Thar's robust engine options, delivering power and torque for any adventure.</p>
+                    <img src="https://images.livemint.com/img/2021/09/16/600x338/Mahindrathar_1604486465203_1604486476898_1631792530682.jpg" alt="Engine">
+                </div>
+                <div class="feature_card">
+                    <h3>Off-Road Capability</h3>
+                    <p>Conquer any terrain with the Thar's legendary 4x4 drive system, high ground clearance, and advanced off-road features.</p>
+                    <img src="https://th.bing.com/th/id/OIP.k1xT00MLylhMyg0DXCvoqQHaEK?rs=1&pid=ImgDetMain" alt="Off-Road">
+                </div>
+                <div class="feature_card">
+                    <h3>Modern Comfort</h3>
+                    <p>Enjoy a comfortable and connected ride with modern amenities, spacious interiors, and user-friendly technology.</p>
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202008/DASHBOARD_0-x675.jpg?BR1mGCJKygaF2kGJp_50BBQbyB1E8IL5" alt="Interior">
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="specs">
+            <h2>Specifications</h2>
+            <div class="specs_grid">
+                <div class="specs_card">
+                    <h3>Engine</h3>
+                    <ul>
+                        <li>Type: 2.0L Turbo Petrol / 2.2L Diesel</li>
+                        <li>Power: 150 BHP / 130 BHP</li>
+                        <li>Torque: 320 Nm / 300 Nm</li>
+                    </ul>
+                </div>
+                <div class="specs_card">
+                    <h3>Dimensions</h3>
+                    <ul>
+                        <li>Length: 3985 mm</li>
+                        <li>Width: 1820 mm</li>
+                        <li>Height: 1850 mm</li>
+                    </ul>
+                </div>
+                <div class="specs_card">
+                    <h3>Transmission</h3>
+                    <ul>
+                        <li>Type: 6-Speed Manual / 6-Speed Automatic</li>
+                        <li>Drive Type: 4x4 (Manual Shift)</li>
+                    </ul>
+                </div>
+                <div class="specs_card">
+                    <h3>Safety Features</h3>
+                    <ul>
+                        <li>Airbags: Dual Front Airbags</li>
+                        <li>ABS with EBD</li>
+                        <li>Electronic Stability Program (ESP)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="book" class="book">
+            <h2>Book Your Thar 4x4 Today!</h2>
+            <p>Experience the thrill of driving the Mahindra Thar. Fill out the form below to book your test drive or pre-order.</p>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="tel" placeholder="Your Phone Number">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Mahindra & Mahindra Ltd. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

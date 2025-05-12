@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #cc8ff8;
+        }
+
+        header {
+            font-size: 1.5em;
+            color: rgb(248, 242, 242);
+            padding: 300px;
+            background: linear-gradient(to right, #a851e6, #420832);
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #hero {
+            padding: 100px 20px;
+            background: #e8c2f3;
+            font-size: 1.2em;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 40px;
+            background: white;
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects-flex {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .project {
+            background: #f2f2f2;
+            padding: 20px;
+            flex: 1 1 300px;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Hi, I'm Sahana S Madival</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Web Developer | Programmer</p>
+        <img src="" alt="Sahana's Photo" class="profile-photo"><br>
+        <button onclick="scrollToSection('contact')">Let's Connect</button>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>I'm a web developer and programmer passionate about creating clean, efficient, and user-friendly digital experiences. 
+            I love solving problems and bringing ideas to life through code.
+            Always eager to learn and explore new technologies to build better solutions.</p>
+    </section>
+
+    <section class="section" id="projects">
+        <h1>My Work</h1>
+        <div class="projects-flex">
+            <div class="project">
+                <h3>Project 1</h3>
+                <h4>VISSION ASSIST</h4>
+                <img src="https://img.freepik.com/premium-photo/vision-assist-devices_1148322-1249.jpg?w=2000" class="profile-photo" width="150" height="150">
+                <p>Vision Assist is an AI-powered tool designed to help visually impaired individuals navigate their surroundings more independently. </p>
+                <a href="files/Project1Details.docx" download>Download(Word)</a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <h4>MEDBOT</h4>
+                <img src="https://ai-medbot.com/images/r/bot-transformed-830.png" width="150" height="150">
+                <p>MedBot is an intelligent AI-powered healthcare assistant designed to provide medical insights, symptom analysis, and health recommendations.</p>
+                <a href="https://your-project-link.com" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: sahanamadival1234@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sahana S Madival .All Rights Reserved</p>
+        <a href="https://www.linkedin.com/in/sahana-madival-0b4974284" target="_blank" style="color: white; text-decoration: underline;">
+            Connect on LinkedIn
+        </a>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Portfolio loaded successfully!");
+        });
+    </script>
+</body>
+</html>
